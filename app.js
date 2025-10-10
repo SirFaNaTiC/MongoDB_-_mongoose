@@ -22,12 +22,11 @@ const expressLayouts = require('express-ejs-layouts');
 app.use(expressLayouts);
 app.set('layout','./layouts/layout'); // layout par défaut
 
-const exampleRouter = require('./routes/exampleRouter');
 const mainRouter = require('./routes/mainRouter');
+const moviesRouter = require('./routes/moviesRouter');
 
 app.use('/', mainRouter);
-app.use('/jokes', exampleRouter);
-app.use('/movies', mainRouter);
+app.use('/movies', moviesRouter);
 
 // Routeur pour la page d'accueil
 app.get('/*path', (req, res) =>{
