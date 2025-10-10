@@ -1,0 +1,31 @@
+{
+  "name": "exercice_n-4_fsjs",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/SirFaNaTiC/exercice_n-4_fsjs#readme",
+  "bugs": {
+    "url": "https://github.com/SirFaNaTiC/exercice_n-4_fsjs/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SirFaNaTiC/exercice_n-4_fsjs.git"
+  },
+  "license": "ISC",
+  "author": "Nathan",
+  "type": "commonjs",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js",
+    "start dev": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.2",
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "express-ejs-layouts": "^2.5.1",
+    "mongodb": "^6.20.0",
+    "mongoose": "^8.19.1",
+    "nodemon": "^3.1.10"
+  }
+}

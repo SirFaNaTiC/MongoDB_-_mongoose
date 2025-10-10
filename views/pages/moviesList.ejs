@@ -1,0 +1,12 @@
+<h1>Movies List</h1>
+
+<% if (movies && movies.length) { %>
+  <% movies.forEach(m => { %>
+    <article class="movie-card">
+      <h3>Movie name: <%= m.title %></h3>
+      <p><strong>Synopsis:</strong> <%= m.synopsis || '—' %></p>
+    </article>
+  <% }) %>
+<% } else { %>
+  <p>Aucun film trouvé.</p>
+<% } %>
