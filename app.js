@@ -24,13 +24,15 @@ app.set('layout','./layouts/layout'); // layout par défaut
 
 const mainRouter = require('./routes/mainRouter');
 const moviesRouter = require('./routes/moviesRouter');
+const movieRouter = require('./routes/movieRouter');
 
 app.use('/', mainRouter);
 app.use('/movies', moviesRouter);
+app.use('/movie', movieRouter);
 
 // Routeur pour la page d'accueil
 app.get('/*path', (req, res) =>{
-    res.redirect('/');
+    res.redirect('/movies');
 });
 
 // Export de l'application pour qu'elle puisse être utilisée par d'autres modules

@@ -1,12 +1,14 @@
-<h1>Movies List</h1>
+<div class="movies-container">
+  <h1 style="text-align: center; color: #2c3e50; margin-bottom: 30px; font-size: 2.5rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.1);">Movies List</h1>
 
-<% if (movies && movies.length) { %>
-  <% movies.forEach(m => { %>
-    <article class="movie-card">
-      <h3>Movie name: <%= m.title %></h3>
-      <p><strong>Synopsis:</strong> <%= m.synopsis || '—' %></p>
-    </article>
-  <% }) %>
-<% } else { %>
-  <p>Aucun film trouvé.</p>
-<% } %>
+  <% if (movies && movies.length) { %>
+    <% movies.forEach(m => { %>
+      <article class="movie-card" onclick="window.location.href='/movie/<%= m.id %>'">
+        <h3><%= m.title %></h3>
+        <p><strong>Synopsis:</strong> <%= m.synopsis || 'Aucune synopsis disponible pour ce film.' %></p>
+      </article>
+    <% }) %>
+  <% } else { %>
+    <p style="text-align: center; color: #666; font-style: italic; font-size: 1.1rem;">Aucun film trouvé.</p>
+  <% } %>
+</div>

@@ -12,10 +12,15 @@
         <b>Movies</b> 
     </div>
     <div>
-        <button class="button" onclick="window.location.href='/'">Main</button>
-        <button class="button" onclick="window.location.href='/movies'">Movies</button>
-    <div>
-
+        <% if (typeof chemin === 'undefined') { %>
+            <button class="button" onclick="window.location.href='/movies'">Movies</button>
+            <button class="button" onclick="window.location.href='/movies/create'">Create Movie</button>
+        <% } else if (chemin === 'movie') { %>
+            <button class="button" onclick="window.location.href='/movies'">Movies</button>
+            <button class="button" onclick="window.location.href='/movies/create'">Create Movie</button>            
+            <button class="button" onclick="window.location.href='/movie/delete/<%= movie._id %>'">Delete Movie</button>
+            <button class="button" onclick="window.location.href='/movie/update/<%= movie._id %>'">Update Movie</button>
+        <% } %>
     </div>
     
 </header>

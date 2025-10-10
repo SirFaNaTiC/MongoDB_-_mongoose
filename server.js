@@ -23,5 +23,5 @@ const server = http.createServer(app);
 
 // Démarrage de l'écoute des requêtes sur le port indiqué
 server.listen(port,()=>{
-    console.log(`http://127.0.0.1:${port}/`);
+    console.log(`http://127.0.0.1:${port}/movies`);
 })
