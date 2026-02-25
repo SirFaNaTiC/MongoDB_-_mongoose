@@ -6,6 +6,9 @@
       <article class="movie-card" onclick="window.location.href='/movie/<%= m.id %>'">
         <h3><%= m.title %></h3>
         <p><strong>Synopsis:</strong> <%= m.synopsis || 'Aucune synopsis disponible pour ce film.' %></p>
+        <% if(m.image) { %>
+            <img class="card-img-top" src="<%= m.image %>">
+        <% } %>
       </article>
     <% }) %>
   <% } else { %>

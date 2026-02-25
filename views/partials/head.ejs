@@ -14,10 +14,14 @@
     <div>
         <% if (typeof chemin === 'undefined') { %>
             <button class="button" onclick="window.location.href='/movies'">Movies</button>
-            <button class="button" onclick="window.location.href='/movies/create'">Create Movie</button>
+            <form action="/movies" method="post" style="display:inline;">
+                <button type="submit" class="button">Create Movie</button>
+            </form>
         <% } else if (chemin === 'movie') { %>
             <button class="button" onclick="window.location.href='/movies'">Movies</button>
-            <button class="button" onclick="window.location.href='/movies/create'">Create Movie</button>            
+            <form action="/movies" method="post" style="display:inline;">
+                <button type="submit" class="button">Create Movie</button>
+            </form>
             <button class="button" onclick="window.location.href='/movie/delete/<%= movie._id %>'">Delete Movie</button>
             <button class="button" onclick="window.location.href='/movie/update/<%= movie._id %>'">Update Movie</button>
         <% } %>
